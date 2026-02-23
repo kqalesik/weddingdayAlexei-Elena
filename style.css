@@ -1,0 +1,601 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* чисто белый фон */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.page {
+  max-width:780px;
+  margin:40px auto;
+  padding:36px;
+  background:#ffffff;
+  border-radius:16px;
+  box-shadow:0 6px 22px rgba(0,0,0,0.08)
+}
+
+.title h1 {
+  margin:0;
+  font-family:'Playfair Display',serif;
+  font-size:30px;
+  text-align:center
+}
+.title p {
+  text-align:center;
+  margin:4px 0 0;
+  color:#666
+}
+header {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px
+}
+
+header,
+.intro,
+.calendar-section,
+.hero,
+.place,
+.countdown,
+.final,
+section {
+  background: #ffffff; /* белый фон для блоков */
+  margin: 0;
+  padding: 0; /* если нужно, можно оставить padding для контента */
+}
+
+* {
+  border: none;
+  box-shadow: none;
+}
+
+/* Если блоки имеют отступы с цветом, можно их убрать */
+section {
+  background: transparent; /* прозрачный фон */
+  margin: 0;
+  padding: 0; /* если нужно, можно оставить padding для контента */
+}
+
+div, section {
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero */
+.hero {
+  margin-top:26px;
+  display:flex;
+  flex-direction:column;
+  gap:26px}
+.hero-left {
+  padding:22px;
+  background:#fff8fa;
+  border-radius:14px;
+  box-shadow:0 4px 18px rgba(0,0,0,0.05);
+  text-align:center
+}
+.date-big {
+  font-family:'Playfair Display',serif;
+  font-size:46px;
+  color:#7b1e2b 
+}
+.weekday {
+  font-size:14px;
+  color:#666;
+  margin-bottom:18px
+}
+
+.start-block .label {
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:1px;
+  color:#222}
+.start-block .line {
+  width:2px;
+  height:60px;
+  background:#7b1e2b;
+  margin:8px auto
+}
+.start-block .time {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  color: #333;
+  text-align: center;
+  white-space: nowrap; /* запрещает перенос строки */
+}
+.start-block .time1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  color: #333;
+  text-align: center;
+  white-space: nowrap; /* запрещает перенос строки */
+    margin-left: 20px;
+
+}
+
+
+.logo-love {
+  font-family: 'Alex Brush', cursive;
+  font-size: 400px;
+  font-weight: -100; /* тонкий */
+  color: #7b1e2b;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -280%); /* смещаем вверх */
+
+  text-align: center;
+  white-space: nowrap;
+
+  z-index: 5; /* выше видео */
+  pointer-events: none;
+}
+
+/* Calendar */
+.calendar {
+  background:#fff;
+  border-radius:12px;
+  padding:14px;
+  border:1px solid #f0e2e7;
+  margin: 20px auto;      /* центр */
+  width: 320px;          /* фиксированная ширина */
+  max-width: 90vw;       /* чтобы не ломалось на телефоне */
+}
+
+.cal-head h3 {
+  margin:0;
+  font-family:'Playfair Display',serif;
+  font-size:22px;
+  text-align:center;
+  color:#7b1e2b
+}
+.grid {
+  margin-top:10px;
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:6px}
+.dow {
+  font-size:11px;
+  color:#777;
+  text-align:center;
+  font-weight:600
+}
+.day {
+  text-align:center;
+  padding:10px 0;
+  border-radius:8px;
+  color:#444;
+  font-size:14px;
+  background:#fafafa
+}
+.day.heart {
+  background:#ffe6ef;
+  position:relative;
+  font-weight:700;
+  color:#7b1e2b
+}
+.day.heart::after {
+  content:"❤";
+  position:absolute;
+  top:-6px;right:-6px;
+  color:#e05b82;
+  font-size:14px
+}
+.empty {
+  background:transparent
+}
+
+/* Place */
+.place {
+  text-align:center;
+  margin-top:40px
+}
+.place h2 {
+  font-family:'Playfair Display',serif;
+  font-size:28px;
+  margin-bottom:10px;
+  color:#7b1e2b
+  
+}
+.rest-name {
+  font-size:20px;
+  font-weight:600;
+  margin:6px 0;
+  color:#7b1e2b
+}
+.address {
+  color:#666;
+  margin-bottom:12px;
+  font-size:15px
+}
+.map-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  background: transparent;
+  color: #7b1e2b;
+  border: 2px dashed #7b1e2b;  /* пунктир */
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.map-btn:hover {
+  background: rgba(126, 17, 31, 0.08);
+}
+
+
+/* Countdown */
+.countdown {
+  text-align:center;
+  margin-top:50px
+}
+.countdown h2 {
+  font-family:'Playfair Display',serif;
+  font-size:26px;
+  margin-bottom:10px;
+  color:#7b1e2b
+}
+
+/* Final */
+.final { 
+  text-align:center;
+  margin-top:60px;
+  font-family:'Playfair Display',serif;
+  font-size:20px;
+  color:#333
+}
+
+.hero-video {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* видео на весь экран */
+  overflow: hidden;
+}
+
+.hero-video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+.video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  text-align: center;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.6);
+}
+
+.video-overlay h1 {
+  color: #000;
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  letter-spacing: 2px;
+  text-shadow: none;
+}
+.title-wrap h1 {
+  position: relative;
+  top: -240px;   /* поднимает текст вверх */
+}
+
+
+
+h2 {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.place {
+  background: #7b1e2b;
+  color: #fff;
+  position: relative;
+}
+
+.place::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  
+  border: 6px solid #fff;
+  border-radius: 12px;
+}
+
+.love h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 64px;
+  color: #7b1e2b;
+  margin-bottom: 20px;
+}
+
+.details {
+  position: relative;
+  overflow: hidden;
+}
+
+.details::before {
+  content: "D";
+  position: absolute;
+  font-family: 'Playfair Display';
+  font-size: 260px;
+  color: rgba(123,30,43,0.15);
+  right: 20px;
+  top: -40px;
+  pointer-events: none;
+}
+
+section:nth-child(even),
+section:nth-child(odd) {
+  background: #ffffff;
+  color: #7b1e2b;
+  padding: 0;
+  border-radius: 0;
+}
+
+section:nth-child(odd) {
+  background: #ffffff;
+  padding: 60px 30px;
+  border-radius: 20px;
+}
+
+* {
+  border-radius: 0 !important;
+}
+
+.intro-text {
+  max-width: 600px;
+  text-align: left;
+  margin: 0 auto;      /* центр блока */
+  text-align: center; /* центр текста */
+}
+
+.intro h2 {
+  font-family:'Playfair Display',serif;
+}
+
+.intro p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #7b1e2b;
+  margin: 0;
+}
+
+
+.hero {
+  padding: 40px;
+  background: #fdf6f0;
+  font-family: 'Arial', sans-serif;
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.time-left,
+.time-right {
+  width: 80px;
+  text-align: center;
+  font-weight: bold;
+  color: #d35400;
+}
+
+.event {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  background: #fff5e6;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.schedule-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  right: 80px;
+  height: 2px;
+  background: #e0c9b0;
+  z-index: 0;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.time-circle {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #7b1e2b;  /* бордовый контур */
+  border-radius: 70%;          /* круг */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #7b1e2b;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+.start-block .line span {
+  display: inline-block;   /* делает текст строчным */
+  white-space: nowrap;     /* запрещает перенос текста на другую строку */
+  margin-left: 8px;        /* пробел от линии, если нужен */
+  font-size: 14px;
+  color: #333;
+}
+
+.intro-photo {
+  background: #ffffff;
+  padding: 40px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-photo img {
+  max-width: 100%;
+  width: 600px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.gift-text {
+  display: block;
+  margin: 0 auto 20px auto; /* горизонтальный центр + отступ снизу */
+  font-style: italic;
+  opacity: 0.9;
+  text-align: center;
+}
+
+/* Анимация появления при скролле */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@media (max-width: 768px) {
+  .intro-text h2 {
+    font-size: 48px; /* уменьшенный заголовок */
+    text-align: left; /* выравнивание заголовка по левому краю */
+  }
+
+  .intro-text p {
+    font-size: 16px;
+    text-align: left; /* выравнивание абзаца по левому краю */
+  }
+}
+
+/* Адаптация для маленьких телефонов до 480px */
+@media (max-width: 480px) {
+  .intro-text h2 {
+    font-size: 36px; /* ещё меньше на маленьких экранах */
+  }
+
+  .intro-text p {
+    font-size: 14px;
+  }
+}
+
+.details-block {
+  position: relative;
+  padding: 80px 30px;
+  text-align: center;
+  color: #7b1e2b;
+  background: url("details-bg.jpg") center/cover no-repeat;
+}
+
+.details-block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(2px);
+}
+
+.details-block * {
+  position: relative;
+  z-index: 1;
+}
+
+.details-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.details-heart {
+  font-size: 18px;
+  margin: 25px 0;
+}
+
+.details-text {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.palette {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.palette span {
+    width: 30px;
+    height: 30px; /* Ширина и высота должны быть одинаковыми */
+    border-radius: 50%; /* Делает элемент круглым */
+    display: inline-block; /* Важно для корректного отображения */
+}
+
+.palette-group {
+    margin-top: 20px;
+}
+
+.palette-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #7b1e2b;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.signature {
+  font-family: 'Playfair Display', serif;
+  margin-top: 30px;
+  font-size: 36px;                     /* крупно */
+  color: #7b1e2b;
+  letter-spacing: 1px;
+}
+
+.signature strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;                     /* ещё крупнее имена */
+  display: block;
+  margin-top: 5px;
+}
